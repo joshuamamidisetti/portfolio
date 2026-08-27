@@ -3,74 +3,689 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Joshua Mamidisetti — Geospatial Engineer focused on Enterprise GIS, Web GIS, open-source geospatial development and GeoAI.">
+<meta name="description" content="Joshua Mamidisetti — Geospatial Engineer focused on Enterprise GIS, Web GIS, remote sensing, open-source geospatial development and GeoAI.">
 <title>Joshua Mamidisetti | Geospatial Engineer</title>
+ 
 <style>
-:root{--bg:#07110f;--panel:#0c1b18;--text:#edf7f3;--muted:#9fb4ae;--line:#1d3831;--accent:#6ee7b7;--accent2:#7dd3fc}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 80% 10%,#12382f 0,transparent 28%),var(--bg);color:var(--text);line-height:1.6}
-a{color:inherit;text-decoration:none}.wrap{max-width:1100px;margin:auto;padding:0 24px}
-nav{position:sticky;top:0;z-index:10;background:rgba(7,17,15,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:.04em}.links{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.links a:hover{color:var(--accent)}
-.hero{min-height:82vh;display:grid;align-items:center;padding:90px 0 70px}.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.95;margin:18px 0 24px;letter-spacing:-.06em;max-width:900px}
-.lead{font-size:clamp(1.05rem,2vw,1.35rem);color:var(--muted);max-width:760px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{padding:12px 18px;border:1px solid var(--line);border-radius:999px;background:#10251f}.btn.primary{background:var(--accent);color:#062018;border-color:var(--accent);font-weight:800}.btn:hover{transform:translateY(-1px)}
-section{padding:90px 0;border-top:1px solid var(--line)}h2{font-size:2rem;margin:0 0 30px;letter-spacing:-.03em}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:linear-gradient(145deg,rgba(18,43,36,.9),rgba(9,24,21,.9));border:1px solid var(--line);border-radius:20px;padding:26px}.card h3{margin:0 0 8px;font-size:1.2rem}.card p{color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{font-size:.82rem;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:#c8ddd7}
-.timeline{display:grid;gap:18px}.role{display:grid;grid-template-columns:170px 1fr;gap:28px}.date{color:var(--accent);font-weight:700}.role h3{margin:0}.role p{color:var(--muted);margin:6px 0 0}.role ul{color:var(--muted);padding-left:20px}
-.contact{display:flex;gap:14px;flex-wrap:wrap}.contact a{color:var(--accent)}
-footer{padding:35px 0;color:var(--muted);font-size:.9rem}
-@media(max-width:700px){.links{display:none}.hero{min-height:auto;padding:75px 0}.grid{grid-template-columns:1fr}.role{grid-template-columns:1fr;gap:5px}section{padding:65px 0}h1{font-size:3.5rem}}
+:root{
+  --bg:#07110f;
+  --panel:#0c1b18;
+  --text:#edf7f3;
+  --muted:#9fb4ae;
+  --line:#1d3831;
+  --accent:#6ee7b7;
+  --accent2:#7dd3fc
+}
+ 
+*{box-sizing:border-box}
+ 
+html{scroll-behavior:smooth}
+ 
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:radial-gradient(circle at 80% 10%,#12382f 0,transparent 28%),var(--bg);
+  color:var(--text);
+  line-height:1.6
+}
+ 
+a{
+  color:inherit;
+  text-decoration:none
+}
+ 
+.wrap{
+  max-width:1100px;
+  margin:auto;
+  padding:0 24px
+}
+ 
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(7,17,15,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)
+}
+ 
+.nav{
+  height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+ 
+.brand{
+  font-weight:800;
+  letter-spacing:.04em
+}
+ 
+.links{
+  display:flex;
+  gap:24px;
+  color:var(--muted);
+  font-size:.92rem
+}
+ 
+.links a:hover{
+  color:var(--accent)
+}
+ 
+.hero{
+  min-height:82vh;
+  display:grid;
+  align-items:center;
+  padding:90px 0 70px
+}
+ 
+.eyebrow{
+  color:var(--accent);
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:.8rem
+}
+ 
+h1{
+  font-size:clamp(3rem,8vw,6.4rem);
+  line-height:.95;
+  margin:18px 0 24px;
+  letter-spacing:-.06em;
+  max-width:900px
+}
+ 
+.lead{
+  font-size:clamp(1.05rem,2vw,1.35rem);
+  color:var(--muted);
+  max-width:760px
+}
+ 
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:32px
+}
+ 
+.btn{
+  padding:12px 18px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#10251f;
+  display:inline-block
+}
+ 
+.btn.primary{
+  background:var(--accent);
+  color:#062018;
+  border-color:var(--accent);
+  font-weight:800
+}
+ 
+.btn:hover{
+  transform:translateY(-1px)
+}
+ 
+section{
+  padding:90px 0;
+  border-top:1px solid var(--line)
+}
+ 
+h2{
+  font-size:2rem;
+  margin:0 0 30px;
+  letter-spacing:-.03em
+}
+ 
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px
+}
+ 
+.card{
+  background:linear-gradient(145deg,rgba(18,43,36,.9),rgba(9,24,21,.9));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:26px
+}
+ 
+.card h3{
+  margin:0 0 8px;
+  font-size:1.2rem
+}
+ 
+.card p{
+  color:var(--muted);
+  margin:0
+}
+ 
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px
+}
+ 
+.tag{
+  font-size:.82rem;
+  padding:6px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:#c8ddd7
+}
+ 
+.timeline{
+  display:grid;
+  gap:18px
+}
+ 
+.role{
+  display:grid;
+  grid-template-columns:170px 1fr;
+  gap:28px
+}
+ 
+.date{
+  color:var(--accent);
+  font-weight:700
+}
+ 
+.role h3{
+  margin:0
+}
+ 
+.role p{
+  color:var(--muted);
+  margin:6px 0 0
+}
+ 
+.role ul{
+  color:var(--muted);
+  padding-left:20px
+}
+ 
+.contact{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap
+}
+ 
+.contact a{
+  color:var(--accent)
+}
+ 
+footer{
+  padding:35px 0;
+  color:var(--muted);
+  font-size:.9rem
+}
+ 
+@media(max-width:700px){
+  .links{
+    display:none
+  }
+ 
+  .hero{
+    min-height:auto;
+    padding:75px 0
+  }
+ 
+  .grid{
+    grid-template-columns:1fr
+  }
+ 
+  .role{
+    grid-template-columns:1fr;
+    gap:5px
+  }
+ 
+  section{
+    padding:65px 0
+  }
+ 
+  h1{
+    font-size:3.5rem
+  }
+}
 </style>
 </head>
+ 
 <body>
-<nav><div class="wrap nav"><div class="brand">JM / GEO</div><div class="links"><a href="#about">About</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#stack">Stack</a><a href="#contact">Contact</a></div></div></nav>
-
+ 
+<nav>
+  <div class="wrap nav">
+    <div class="brand">JM / GEO</div>
+ 
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+ 
+ 
 <header class="wrap hero">
-<div>
-<div class="eyebrow">Geospatial Engineer · Web GIS · GeoAI</div>
-<h1>Building useful things with maps, data & code.</h1>
-<p class="lead">I'm Joshua Mamidisetti, a Geospatial Engineer working across Enterprise GIS, Web GIS and geospatial application development, while expanding into open-source geospatial technology and GeoAI.</p>
-<div class="actions"><a class="btn primary" href="#projects">Explore my work</a><a class="btn" href="https://github.com/joshuamamidisetti" target="_blank">GitHub ↗</a><a class="btn" href="https://www.linkedin.com/in/joshua-mamidisetti-392519245/" target="_blank">LinkedIn ↗</a></div>
-</div>
+  <div>
+ 
+    <div class="eyebrow">
+      Geospatial Engineer · Web GIS · Remote Sensing · GeoAI
+    </div>
+ 
+    <h1>
+      Building useful things with maps, data & code.
+    </h1>
+ 
+    <p class="lead">
+      I'm Joshua Mamidisetti, a Geospatial Engineer working across
+      Enterprise GIS, Web GIS, remote sensing and geospatial application
+      development, while expanding into open-source geospatial technology
+      and GeoAI.
+    </p>
+ 
+    <div class="actions">
+ 
+      <a class="btn primary" href="#projects">
+        Explore my work
+      </a>
+ 
+      <a class="btn"
+         href="https://github.com/joshuamamidisetti"
+         target="_blank">
+        GitHub ↗
+      </a>
+ 
+      <a class="btn"
+         href="https://www.linkedin.com/in/joshua-mamidisetti-392519245/"
+         target="_blank">
+        LinkedIn ↗
+      </a>
+ 
+    </div>
+ 
+  </div>
 </header>
-
+ 
+ 
 <main>
-<section id="about"><div class="wrap">
-<h2>About</h2>
-<div class="card"><p>I work with GIS platforms, spatial databases, web technologies and enterprise geospatial workflows. My experience includes ArcGIS Enterprise, ArcGIS Pro, ArcGIS Online, ArcGIS Experience Builder, ArcGIS JavaScript API, Oracle Spatial, PostgreSQL and SDE.</p><p style="margin-top:14px">Alongside enterprise GIS, I build open-source geospatial applications and am developing my skills in machine learning, artificial intelligence and GeoAI.</p></div>
-</div></section>
-
-<section id="work"><div class="wrap">
-<h2>Experience</h2>
-<div class="timeline">
-<div class="role"><div class="date">Current</div><div><h3>Geospatial Engineer · LTIMindtree</h3><p>Enterprise GIS and utility-domain workflows, GIS application development, geospatial data and platform support.</p></div></div>
-<div class="role"><div class="date">Earlier</div><div><h3>Graduate Engineer Trainee · LTIMindtree</h3><p>Built practical experience across GIS technologies, enterprise environments and geospatial application workflows.</p></div></div>
-</div>
-</div></section>
-
-<section id="projects"><div class="wrap">
-<h2>Selected work</h2>
-<div class="grid">
-<div class="card"><h3>GeoLibre India</h3><p>Open-source Web GIS application exploring modern, accessible geospatial mapping with a focus on India.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">MapLibre GL JS</span><span class="tag">Open Source</span></div><div class="actions"><a class="btn" href="https://github.com/GeoVision-Labs/geolibre-india" target="_blank">Source ↗</a><a class="btn" href="https://geolibre-india.vercel.app/" target="_blank">Live demo ↗</a></div></div>
-<div class="card"><h3>Drought Prediction & Analysis</h3><p>B.Tech academic project focused on drought prediction and analysis in Anantapur District, Andhra Pradesh.</p><div class="tags"><span class="tag">GIS</span><span class="tag">Spatial Analysis</span><span class="tag">Environmental GIS</span></div></div>
-</div>
-</div></section>
-
-<section id="stack"><div class="wrap">
-<h2>Technical stack</h2>
-<div class="grid">
-<div class="card"><h3>Enterprise GIS</h3><p>ArcGIS Enterprise · ArcGIS Pro · ArcGIS Online · ArcGIS Experience Builder · ArcGIS Server · ArcGIS REST API · ArcPy</p></div>
-<div class="card"><h3>Web & Development</h3><p>React · TypeScript · JavaScript · Node.js · HTML · CSS · REST APIs · Git</p></div>
-<div class="card"><h3>Spatial Data</h3><p>PostgreSQL · PostGIS · Oracle Spatial · Enterprise Geodatabase · SDE · File Geodatabase</p></div>
-<div class="card"><h3>Open Source & Direction</h3><p>OpenLayers · MapLibre GL JS · GeoServer · QGIS · GitHub · Machine Learning · AI · GeoAI</p></div>
-</div>
-</div></section>
-
-<section id="contact"><div class="wrap">
-<h2>Let's connect</h2>
-<div class="card"><p>Interested in geospatial technology, Web GIS, open-source mapping or GeoAI? Feel free to connect.</p><div class="contact" style="margin-top:18px"><a href="https://www.linkedin.com/in/joshua-mamidisetti-392519245/" target="_blank">LinkedIn</a><a href="https://github.com/joshuamamidisetti" target="_blank">GitHub</a></div></div>
-</div></section>
+ 
+ 
+<!-- ABOUT -->
+ 
+<section id="about">
+ 
+  <div class="wrap">
+ 
+    <h2>About</h2>
+ 
+    <div class="card">
+ 
+      <p>
+        I work with GIS platforms, spatial databases, web technologies
+        and enterprise geospatial workflows. My experience includes
+        ArcGIS Enterprise, ArcGIS Pro, ArcGIS Online,
+        ArcGIS Experience Builder, ArcGIS JavaScript API,
+        Oracle Spatial, PostgreSQL and SDE.
+      </p>
+ 
+      <p style="margin-top:14px">
+        Alongside enterprise GIS, I build geospatial applications
+        involving remote sensing, satellite imagery, spatial analysis
+        and open-source mapping technologies. I am also developing
+        my skills in machine learning, artificial intelligence and GeoAI.
+      </p>
+ 
+    </div>
+ 
+  </div>
+ 
+</section>
+ 
+ 
+<!-- EXPERIENCE -->
+ 
+<section id="work">
+ 
+  <div class="wrap">
+ 
+    <h2>Experience</h2>
+ 
+    <div class="timeline">
+ 
+      <div class="role">
+ 
+        <div class="date">
+          Current
+        </div>
+ 
+        <div>
+ 
+          <h3>
+            Geospatial Engineer · LTIMindtree
+          </h3>
+ 
+          <p>
+            Enterprise GIS and utility-domain workflows, GIS application
+            development, geospatial data and platform support.
+          </p>
+ 
+        </div>
+ 
+      </div>
+ 
+ 
+      <div class="role">
+ 
+        <div class="date">
+          Earlier
+        </div>
+ 
+        <div>
+ 
+          <h3>
+            Graduate Engineer Trainee · LTIMindtree
+          </h3>
+ 
+          <p>
+            Built practical experience across GIS technologies,
+            enterprise environments and geospatial application workflows.
+          </p>
+ 
+        </div>
+ 
+      </div>
+ 
+    </div>
+ 
+  </div>
+ 
+</section>
+ 
+ 
+<!-- PROJECTS -->
+ 
+<section id="projects">
+ 
+  <div class="wrap">
+ 
+    <h2>Selected work</h2>
+ 
+    <div class="grid">
+ 
+ 
+      <!-- SENTINEL PROJECT -->
+ 
+      <div class="card">
+ 
+        <h3>
+          Sentinel Water Change Detection
+        </h3>
+ 
+        <p>
+          Satellite-based water change detection and analysis using
+          Sentinel imagery to identify and visualize changes in
+          surface-water extent across time.
+        </p>
+ 
+        <div class="tags">
+ 
+          <span class="tag">
+            Sentinel
+          </span>
+ 
+          <span class="tag">
+            Remote Sensing
+          </span>
+ 
+          <span class="tag">
+            Water Change
+          </span>
+ 
+          <span class="tag">
+            GIS
+          </span>
+ 
+          <span class="tag">
+            Earth Observation
+          </span>
+ 
+        </div>
+ 
+        <div class="actions">
+ 
+          <!-- Replace with your actual GitHub project URL -->
+          <a class="btn"
+             href="https://github.com/joshuamamidisetti"
+             target="_blank">
+            Source ↗
+          </a>
+ 
+        </div>
+ 
+      </div>
+ 
+ 
+      <!-- GEOLIBRE INDIA -->
+ 
+      <div class="card">
+ 
+        <h3>
+          GeoLibre India
+        </h3>
+ 
+        <p>
+          Open-source Web GIS application exploring modern,
+          accessible geospatial mapping with a focus on India.
+        </p>
+ 
+        <div class="tags">
+ 
+          <span class="tag">
+            React
+          </span>
+ 
+          <span class="tag">
+            TypeScript
+          </span>
+ 
+          <span class="tag">
+            MapLibre GL JS
+          </span>
+ 
+          <span class="tag">
+            Open Source
+          </span>
+ 
+        </div>
+ 
+        <div class="actions">
+ 
+          <a class="btn"
+             href="https://github.com/GeoVision-Labs/geolibre-india"
+             target="_blank">
+            Source ↗
+          </a>
+ 
+          <a class="btn"
+             href="https://geolibre-india.vercel.app/"
+             target="_blank">
+            Live demo ↗
+          </a>
+ 
+        </div>
+ 
+      </div>
+ 
+ 
+      <!-- DROUGHT PROJECT -->
+ 
+      <div class="card">
+ 
+        <h3>
+          Drought Prediction & Analysis
+        </h3>
+ 
+        <p>
+          B.Tech academic project focused on drought prediction
+          and analysis in Anantapur District, Andhra Pradesh.
+        </p>
+ 
+        <div class="tags">
+ 
+          <span class="tag">
+            GIS
+          </span>
+ 
+          <span class="tag">
+            Spatial Analysis
+          </span>
+ 
+          <span class="tag">
+            Environmental GIS
+          </span>
+ 
+        </div>
+ 
+      </div>
+ 
+    </div>
+ 
+  </div>
+ 
+</section>
+ 
+ 
+<!-- TECHNICAL STACK -->
+ 
+<section id="stack">
+ 
+  <div class="wrap">
+ 
+    <h2>Technical stack</h2>
+ 
+    <div class="grid">
+ 
+ 
+      <div class="card">
+ 
+        <h3>
+          Enterprise GIS
+        </h3>
+ 
+        <p>
+          ArcGIS Enterprise · ArcGIS Pro · ArcGIS Online ·
+          ArcGIS Experience Builder · ArcGIS Server ·
+          ArcGIS REST API · ArcPy
+        </p>
+ 
+      </div>
+ 
+ 
+      <div class="card">
+ 
+        <h3>
+          Web & Development
+        </h3>
+ 
+        <p>
+          React · TypeScript · JavaScript · Node.js ·
+          HTML · CSS · REST APIs · Git
+        </p>
+ 
+      </div>
+ 
+ 
+      <div class="card">
+ 
+        <h3>
+          Spatial Data
+        </h3>
+ 
+        <p>
+          PostgreSQL · PostGIS · Oracle Spatial ·
+          Enterprise Geodatabase · SDE · File Geodatabase
+        </p>
+ 
+      </div>
+ 
+ 
+      <div class="card">
+ 
+        <h3>
+          Remote Sensing & Open Source
+        </h3>
+ 
+        <p>
+          Sentinel · Earth Observation · Remote Sensing ·
+          OpenLayers · MapLibre GL JS · GeoServer ·
+          QGIS · GitHub · GeoAI
+        </p>
+ 
+      </div>
+ 
+    </div>
+ 
+  </div>
+ 
+</section>
+ 
+ 
+<!-- CONTACT -->
+ 
+<section id="contact">
+ 
+  <div class="wrap">
+ 
+    <h2>
+      Let's connect
+    </h2>
+ 
+    <div class="card">
+ 
+      <p>
+        Interested in geospatial technology, Web GIS,
+        remote sensing, open-source mapping or GeoAI?
+        Feel free to connect.
+      </p>
+ 
+      <div class="contact" style="margin-top:18px">
+ 
+        <a
+          href="https://www.linkedin.com/in/joshua-mamidisetti-392519245/"
+          target="_blank">
+          LinkedIn
+        </a>
+ 
+        <a
+          href="https://github.com/joshuamamidisetti"
+          target="_blank">
+          GitHub
+        </a>
+ 
+      </div>
+ 
+    </div>
+ 
+  </div>
+ 
+</section>
+ 
+ 
 </main>
-
-<footer><div class="wrap">© 2026 Joshua Mamidisetti · Geospatial Engineer</div></footer>
+ 
+ 
+<footer>
+ 
+  <div class="wrap">
+    © 2026 Joshua Mamidisetti · Geospatial Engineer
+  </div>
+ 
+</footer>
+ 
+ 
 </body>
 </html>
